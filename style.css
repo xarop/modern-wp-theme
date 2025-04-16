@@ -1,15 +1,18 @@
 /*
 Theme Name: Modern WP Theme
-Theme URI: 
-Author: 
-Description: A modern WordPress theme with SASS, Tailwind, Twig, and ACF Blocks
+Theme URI: https://github.com/xarop/modern-wp-theme
+Author: xarop
+Author URI: https://github.com/xarop
+Description: A modern WordPress theme built with SASS, Pico CSS, Twig templating, and Advanced Custom Fields (ACF) Blocks. Features a clean, minimal design with custom blocks for flexible content creation.
 Version: 1.0.0
-Requires at least: 5.9
-Tested up to: 6.4
+Requires at least: 6.0
 Requires PHP: 7.4
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: modern-wp-theme
+Tags: custom-blocks, pico-css, twig, acf, responsive, minimal, modern
+
+This theme is built with modern development tools and practices.
 */
 
 /* The main theme styles are compiled from src/scss/style.scss */
