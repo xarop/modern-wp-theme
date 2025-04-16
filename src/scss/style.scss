@@ -1,0 +1,19 @@
+/*!
+Theme Name: Modern WP Theme
+Theme URI: 
+Author: 
+Description: A modern WordPress theme with SASS, Tailwind, Twig, and ACF Blocks
+Version: 1.0.0
+License: GNU General Public License v2 or later
+*/
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// Custom SCSS imports
+@import "variables";
+@import "mixins";
+@import "components/index";
+@import "blocks/index";
+@import "layouts/index";

@@ -1,0 +1,15 @@
+<div class="hero-block bg-gray-100 py-12">
+    <div class="container mx-auto px-4">
+        {% if fields.title %}
+            <h2 class="text-4xl font-bold mb-4">{{ fields.title }}</h2>
+        {% endif %}
+        {% if fields.content %}
+            <div class="prose">{{ fields.content }}</div>
+        {% endif %}
+        {% if fields.cta_button %}
+            <a href="{{ fields.cta_link }}" class="inline-block mt-6 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+                {{ fields.cta_button }}
+            </a>
+        {% endif %}
+    </div>
+</div>

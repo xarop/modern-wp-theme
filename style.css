@@ -1,0 +1,15 @@
+/*
+Theme Name: Modern WP Theme
+Theme URI: 
+Author: 
+Description: A modern WordPress theme with SASS, Tailwind, Twig, and ACF Blocks
+Version: 1.0.0
+Requires at least: 5.9
+Tested up to: 6.4
+Requires PHP: 7.4
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: modern-wp-theme
+*/
+
+/* The main theme styles are compiled from src/scss/style.scss */

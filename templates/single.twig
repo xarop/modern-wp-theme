@@ -1,0 +1,29 @@
+{% extends "base.twig" %}
+
+{% block content %}
+    <article class="container mx-auto px-4 py-8">
+        <header class="mb-8">
+            <h1 class="text-4xl font-bold mb-4">{{ post.title }}</h1>
+            <div class="text-gray-600">
+                Posted on {{ post.date }} by {{ post.author.name }}
+            </div>
+        </header>
+
+        <div class="prose max-w-none">
+            {{ post.content }}
+        </div>
+
+        {% if post.terms('category') %}
+            <div class="mt-8">
+                <h3 class="text-lg font-semibold mb-2">Categories:</h3>
+                <div class="flex gap-2">
+                    {% for category in post.terms('category') %}
+                        <a href="{{ category.link }}" class="px-3 py-1 bg-gray-100 rounded-full hover:bg-gray-200">
+                            {{ category.name }}
+                        </a>
+                    {% endfor %}
+                </div>
+            </div>
+        {% endif %}
+    </article>
+{% endblock %}

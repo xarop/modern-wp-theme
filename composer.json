@@ -1,0 +1,14 @@
+{
+    "name": "modern-theme/wordpress-theme",
+    "description": "A modern WordPress theme with SASS, Tailwind, Twig, and ACF Blocks",
+    "type": "wordpress-theme",
+    "require": {
+        "php": ">=7.4",
+        "timber/timber": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "ModernWPTheme\\": "inc/"
+        }
+    }
+}
