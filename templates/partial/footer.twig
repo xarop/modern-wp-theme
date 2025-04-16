@@ -1,0 +1,42 @@
+<footer class="bg-gray-50 border-t border-gray-200">
+    <div class="container mx-auto px-4 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="col-span-1 md:col-span-2">
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">{{ site.name }}</h3>
+                <p class="text-gray-600">A modern WordPress theme with SASS and Pico CSS.</p>
+            </div>
+
+            <div class="col-span-1">
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">Navigation</h3>
+                {% if menu.footer %}
+                    <ul class="space-y-2">
+                        {% for item in menu.footer.items %}
+                            <li>
+                                <a href="{{ item.link }}" class="text-gray-600 hover:text-gray-900">
+                                    {{ item.title }}
+                                </a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+
+            <div class="col-span-1">
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">Contact</h3>
+                <ul class="space-y-2">
+                    <li>
+                        <a href="mailto:{{ site.admin_email }}" class="text-gray-600 hover:text-gray-900">
+                            {{ site.admin_email }}
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="mt-8 pt-8 border-t border-gray-200">
+            <p class="text-center text-gray-600">
+                &copy; {{ "now"|date('Y') }} {{ site.name }}. All rights reserved.
+            </p>
+        </div>
+    </div>
+</footer>

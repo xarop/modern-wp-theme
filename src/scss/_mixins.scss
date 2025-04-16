@@ -1,0 +1,56 @@
+// Breakpoint mixins
+@mixin sm {
+    @media (min-width: $breakpoint-sm) {
+        @content;
+    }
+}
+
+@mixin md {
+    @media (min-width: $breakpoint-md) {
+        @content;
+    }
+}
+
+@mixin lg {
+    @media (min-width: $breakpoint-lg) {
+        @content;
+    }
+}
+
+@mixin xl {
+    @media (min-width: $breakpoint-xl) {
+        @content;
+    }
+}
+
+// Container
+@mixin container {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: $spacing;
+    padding-left: $spacing;
+    
+    @include sm {
+        max-width: 540px;
+    }
+    
+    @include md {
+        max-width: 720px;
+    }
+    
+    @include lg {
+        max-width: 960px;
+    }
+    
+    @include xl {
+        max-width: 1140px;
+    }
+}
+
+// Grid
+@mixin grid($columns: 1, $gap: $grid-spacing) {
+    display: grid;
+    grid-template-columns: repeat($columns, 1fr);
+    gap: $gap;
+}

@@ -1,0 +1,27 @@
+{% if posts.pagination.pages is not empty %}
+    <nav class="pagination" aria-label="Pagination">
+        {% if posts.pagination.prev %}
+            <a href="{{ posts.pagination.prev.link }}" class="outline" role="button">
+                Previous
+            </a>
+        {% endif %}
+        
+        {% for page in posts.pagination.pages %}
+            {% if page.link %}
+                <a href="{{ page.link }}" class="{{ page.current ? 'primary' : 'outline' }}" role="button">
+                    {{ page.title }}
+                </a>
+            {% else %}
+                <a role="button" class="outline secondary" aria-current="page">
+                    {{ page.title }}
+                </a>
+            {% endif %}
+        {% endfor %}
+        
+        {% if posts.pagination.next %}
+            <a href="{{ posts.pagination.next.link }}" class="outline" role="button">
+                Next
+            </a>
+        {% endif %}
+    </nav>
+{% endif %}

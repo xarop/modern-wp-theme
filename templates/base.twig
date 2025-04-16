@@ -3,20 +3,21 @@
 <head>
     <meta charset="{{ site.charset }}" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
     {{ function('wp_head') }}
 </head>
 <body class="{{ body_class }}">
-    <header class="site-header">
+    <header>
         {% include 'partial/header.twig' %}
     </header>
 
-    <main id="content" class="site-content">
+    <main class="container">
         {% block content %}
             Sorry, no content
         {% endblock %}
     </main>
 
-    <footer class="site-footer">
+    <footer>
         {% include 'partial/footer.twig' %}
     </footer>
     {{ function('wp_footer') }}

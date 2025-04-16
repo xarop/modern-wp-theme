@@ -1,0 +1,26 @@
+// Theme Colors
+$primary: var(--primary);
+$secondary: var(--secondary);
+$success: #46b450;
+$info: #00a0d2;
+$warning: #ffb900;
+$danger: #dc3232;
+$contrast: var(--contrast);
+
+// Typography
+$font-family-base: var(--font-family);
+$font-size-base: var(--font-size);
+$line-height-base: var(--line-height);
+
+// Spacing
+$spacing: var(--spacing);
+$grid-spacing: var(--grid-spacing);
+
+// Border radius
+$border-radius: var(--border-radius);
+
+// Breakpoints
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;

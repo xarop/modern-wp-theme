@@ -2,18 +2,85 @@
 Theme Name: Modern WP Theme
 Theme URI: 
 Author: 
-Description: A modern WordPress theme with SASS, Tailwind, Twig, and ACF Blocks
+Description: A modern WordPress theme with SASS, Pico CSS, Twig, and ACF Blocks
 Version: 1.0.0
 License: GNU General Public License v2 or later
 */
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-// Custom SCSS imports
+// Import variables and mixins
 @import "variables";
 @import "mixins";
-@import "components/index";
-@import "blocks/index";
-@import "layouts/index";
+
+// Base styles
+body {
+    font-family: $font-family-base;
+    font-size: $font-size-base;
+    line-height: $line-height-base;
+    color: $secondary;
+}
+
+// WordPress core styles
+.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.aligncenter {
+    display: block;
+    margin: 5px auto 5px auto;
+}
+
+.alignright {
+    float: right;
+    margin: 5px 0 20px 20px;
+}
+
+.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+}
+
+.wp-caption {
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    max-width: 96%;
+    padding: 5px 3px 10px;
+    text-align: center;
+    
+    img {
+        border: 0 none;
+        height: auto;
+        margin: 0;
+        max-width: 98.5%;
+        padding: 0;
+        width: auto;
+    }
+    
+    .wp-caption-text {
+        font-size: 11px;
+        line-height: 17px;
+        margin: 0;
+        padding: 0 4px 5px;
+    }
+}
+
+// Custom components
+.btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    border-radius: 0.375rem;
+    background-color: var(--primary);
+    color: var(--primary-inverse);
+    text-decoration: none;
+    
+    &:hover {
+        filter: brightness(1.1);
+    }
+    
+    &:focus {
+        outline: 2px solid var(--primary);
+        outline-offset: 2px;
+    }
+}

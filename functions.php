@@ -15,6 +15,9 @@ Timber::init();
 // Set the directories Timber should look for templates
 Timber::$dirname = ['templates'];
 
+// ACF Blocks
+require_once get_template_directory() . '/inc/acf-blocks.php';
+
 // Set up theme defaults
 if (!class_exists('ModernWPTheme')) {
     class ModernWPTheme {

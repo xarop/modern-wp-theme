@@ -1,0 +1,22 @@
+{# Call to Action Block Template #}
+<article class="py-12 {{ fields.style == 'dark' ? 'contrast' : (fields.style == 'primary' ? 'primary' : '') }}">
+    <div class="container mx-auto px-4 text-center">
+        <hgroup>
+            {% if fields.heading %}
+                <h2 class="text-3xl font-bold mb-4">{{ fields.heading }}</h2>
+            {% endif %}
+            
+            {% if fields.text %}
+                <p class="text-lg mb-8 max-w-2xl mx-auto">{{ fields.text }}</p>
+            {% endif %}
+        </hgroup>
+        
+        {% if fields.button %}
+            <p>
+                <a href="{{ fields.button.url }}" role="button" class="inline-flex items-center px-6 py-3 {{ fields.style == 'light' ? 'primary' : 'outline' }} focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500">
+                    {{ fields.button.text }}
+                </a>
+            </p>
+        {% endif %}
+    </div>
+</article>

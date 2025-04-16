@@ -1,6 +1,15 @@
-# Modern WordPress Theme
+# Modern WP Theme
 
-A modern WordPress theme built with SASS, Tailwind CSS, Twig templating (via Timber), and ACF Blocks.
+A modern WordPress theme built with SASS, Pico CSS, Twig templating, and Advanced Custom Fields (ACF) Blocks.
+
+## Features
+
+- Modern and minimal design using Pico CSS
+- Twig templating with Timber
+- Custom blocks using Advanced Custom Fields (ACF)
+- SASS for enhanced styling
+- Fully responsive design
+- Modern development workflow with Laravel Mix
 
 ## Requirements
 
@@ -54,4 +63,4 @@ A modern WordPress theme built with SASS, Tailwind CSS, Twig templating (via Tim
 1. Create a new Twig template in `templates/blocks/`
 2. Register the block in `functions.php`
 3. Create ACF fields for the block
-4. Style the block using Tailwind classes and/or SASS
+4. Style the block using Pico CSS classes and/or SASS

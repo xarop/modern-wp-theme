@@ -1,0 +1,24 @@
+<header class="container">
+    <div class="nav">
+        <ul>
+            <li>
+                {% if function('has_custom_logo') %}
+                    <strong>{{ function('get_custom_logo') }}</strong>
+                {% else %}
+                    <strong><a href="{{ site.url }}" class="contrast">{{ site.name }}</a></strong>
+                {% endif %}
+            </li>
+        </ul>
+        {% if menu.primary %}
+            <ul>
+                {% for item in menu.primary.items %}
+                    <li>
+                        <a href="{{ item.link }}" class="{{ item.current ? 'contrast' : 'secondary' }}">
+                            {{ item.title }}
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </div>
+</header>

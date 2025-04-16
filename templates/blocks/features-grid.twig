@@ -1,0 +1,31 @@
+{# Features Grid Block Template #}
+<article>
+    <div class="container">
+        {% if fields.title %}
+            <hgroup>
+                <h2>{{ fields.title }}</h2>
+                {% if fields.description %}
+                    <p>{{ fields.description }}</p>
+                {% endif %}
+            </hgroup>
+        {% endif %}
+        
+        {% if fields.features %}
+            <div class="grid">
+                {% for feature in fields.features %}
+                    <article>
+                        {% if feature.icon %}
+                            <img src="{{ feature.icon.url }}" alt="{{ feature.icon.alt }}" style="max-width: 48px; margin-bottom: 1rem;">
+                        {% endif %}
+                        
+                        <h3>{{ feature.title }}</h3>
+                        
+                        {% if feature.description %}
+                            <p>{{ feature.description }}</p>
+                        {% endif %}
+                    </article>
+                {% endfor %}
+            </div>
+        {% endif %}
+    </div>
+</article>
